@@ -1,0 +1,14 @@
+{
+  "extends": ["eslint-config-egg"],
+  "env": {
+  },
+  "globals": {
+  },
+  "rules": {
+    "no-bitwise": 0
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "tofu.shaderprimer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "build:dev": "rollup -c -w",
+    "prever": "npm run build && npm run extract && git add -A && git commit -m 'release: release a new version'",
+    "ver": "standard-version -m 'chore(release): v%s'",
+    "postver": "git push --follow-tags origin master && npm publish",
+    "extract": "npmsrcify extract",
+    "docs": "jsdoc -c jsdoc.conf.json -R README.md",
+    "lint": "eslint .",
+    "fix": "eslint --fix ./src",
+    "http": "hs -o",
+    "precommit": "npm run lint",
+    "commitmsg": "commitlint -E GIT_PARAMS",
+    "test": "karma start"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "build",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonChen1982/tofu.shaderprimer.git"
+  },
+  "keywords": [
+    "uc-ar",
+    "tofu",
+    "three",
+    "3d"
+  ],
+  "author": {
+    "name": "jasonChen1982"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "three": "^0.89.0",
+    "tofu.js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-egg": "^5.1.1",
+    "http-server": "^0.10.0",
+    "husky": "^0.14.3",
+    "npmsrcify": "0.0.2",
+    "rollup": "^0.52.3",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-watch": "^4.3.1",
+    "standard-version": "^4.4.0",
+    "three": "^0.92.0"
+  },
+  "bugs": {
+    "url": "https://github.com/jasonChen1982/tofu.shaderprimer/issues"
+  },
+  "homepage": "https://github.com/jasonChen1982/tofu.shaderprimer#readme"
+}
