@@ -58,10 +58,20 @@
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-watch": "^4.3.1",
     "standard-version": "^4.4.0",
-    "three": "^0.92.0"
+    "three": "^0.92.0",
+    "tofu.js": "^0.6.2"
   },
   "bugs": {
     "url": "https://github.com/jasonChen1982/tofu.shaderprimer/issues"
   },
-  "homepage": "https://github.com/jasonChen1982/tofu.shaderprimer#readme"
+  "homepage": "https://github.com/jasonChen1982/tofu.shaderprimer#readme",
+  "config": {
+    "npmsrcify": {
+      "modules": [
+        "tofu.js",
+        "three"
+      ],
+      "output": "./examples/lib"
+    }
+  }
 }
